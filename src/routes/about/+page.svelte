@@ -195,4 +195,50 @@
 			font-size: 1rem;
 		}
 	}
+
+	@media (max-width: 600px) {
+		main {
+			padding: 1.5rem 0.75rem;
+		}
+
+		.hero {
+			padding: 3.5rem 1.25rem;
+			margin-bottom: 2.5rem;
+			border-radius: 12px;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.content-section,
+		.media-section {
+			padding: 1.5rem;
+			margin-bottom: 2rem;
+			box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+		}
+
+		h2 {
+			font-size: 1.6rem;
+		}
+
+		p {
+			font-size: 1rem;
+			line-height: 1.6;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.hero {
+			padding: 3rem 1rem;
+		}
+
+		.hero-content {
+			text-align: left;
+		}
+
+		.subtitle {
+			margin: 0;
+		}
+	}
 </style>

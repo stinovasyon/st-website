@@ -86,4 +86,17 @@
 			padding: 40px 0;
 		}
 	}
+
+	@media (max-width: 600px) {
+		footer {
+			padding: 24px 16px;
+			gap: 6px;
+			text-align: center;
+		}
+
+		footer p {
+			margin: 0;
+			font-size: 0.95rem;
+		}
+	}
 </style>

@@ -131,4 +131,45 @@
 	a:hover {
 		color: var(--accent-color);
 	}
+
+	@media (max-width: 640px) {
+		header {
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		.corner {
+			width: 2.5em;
+			height: 2.5em;
+		}
+
+		.corner:last-child {
+			display: none;
+		}
+
+		nav {
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		svg {
+			display: none;
+		}
+
+		ul {
+			padding: 0 0.25rem;
+		}
+
+		nav a {
+			padding: 0 0.65em;
+			font-size: 0.7rem;
+			letter-spacing: 0.08em;
+		}
+
+		li.active::before {
+			--size: 5px;
+		}
+	}
 </style>
