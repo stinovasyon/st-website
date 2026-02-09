@@ -186,14 +186,6 @@
 		</a>
 	</div>
 
-	<footer>
-		<p>© 2023 ST İnovasyon. Tüm hakları saklıdır.</p>
-		<p>
-			Web sitesi: <a href="https://www.stinovasyon.com.tr" class="website-link" target="_blank"
-				>www.stinovasyon.com.tr</a
-			>
-		</p>
-	</footer>
 </div>
 
 <style>
@@ -428,15 +420,6 @@
 
 	.btn-secondary:hover {
 		background: rgba(255, 255, 255, 0.1);
-	}
-
-	footer {
-		text-align: center;
-		padding: 20px;
-		color: #777;
-		font-size: 0.9rem;
-		border-top: 1px solid #eee;
-		margin-top: 20px;
 	}
 
 	.website-link {

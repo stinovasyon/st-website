@@ -32,6 +32,10 @@
 				<!-- svelte-ignore attribute_illegal_colon -->
 				<a sveltekit:prefetch href="/product">Ürün</a>
 			</li>
+			<li class:active={$page.url.pathname === '/contact'}>
+				<!-- svelte-ignore attribute_illegal_colon -->
+				<a sveltekit:prefetch href="/contact">İletişim</a>
+			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
@@ -152,6 +156,7 @@
 			width: 100%;
 			overflow-x: auto;
 			-webkit-overflow-scrolling: touch;
+			padding: 0 0.5rem;
 		}
 
 		svg {
@@ -160,11 +165,19 @@
 
 		ul {
 			padding: 0 0.25rem;
+			gap: 0.35rem;
+			scroll-snap-type: x mandatory;
+		}
+
+		li {
+			flex: 0 0 auto;
+			scroll-snap-align: center;
 		}
 
 		nav a {
-			padding: 0 0.65em;
-			font-size: 0.7rem;
+			padding: 0 0.75em;
+			min-height: 44px;
+			font-size: 0.72rem;
 			letter-spacing: 0.08em;
 		}
 
