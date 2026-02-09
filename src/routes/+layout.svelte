@@ -23,7 +23,11 @@
 </main>
 
 <footer>
-	<p><a href="https://www.stinovasyon.com.tr">ST Inovasyon</a> © 2021 - 2026</p>
+	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
+	<p>
+		Web sitesi: <a href="https://www.stinovasyon.com.tr" class="website-link" target="_blank"
+			>www.stinovasyon.com.tr</a>
+	</p>
 </footer>
 
 <style>
