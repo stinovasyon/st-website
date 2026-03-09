@@ -7,7 +7,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://www.stinovasyon.com.tr/">
+		<a href="https://www.stinovasyon.com/">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>

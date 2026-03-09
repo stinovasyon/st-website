@@ -25,19 +25,19 @@
 <footer>
 	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
 	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com.tr" class="website-link" target="_blank"
-			>www.stinovasyon.com.tr</a
+		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
+			>www.stinovasyon.com</a
 		>
 	</p>
 </footer>
 
 <style>
 	:root {
-		--bg-color: #121212;
-		--surface-color: #1e1e1e;
+		--bg-color: #F8FAFC;
+		--surface-color: #B8D4ED;
 		--primary-color: #00aaff;
-		--text-color: #e0e0e0;
-		--text-muted-color: #a0a0a0;
+		--text-color: #000000;
+		--text-muted-color: #121212;
 		--border-color: #333;
 
 		font-family:
