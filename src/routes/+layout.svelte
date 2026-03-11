@@ -1,7 +1,6 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
-
 </script>
 
 <Header />
@@ -13,16 +12,14 @@
 <footer>
 	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
 	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
-			>www.stinovasyon.com</a
-		>
+		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank">www.stinovasyon.com</a>
 	</p>
 </footer>
 
 <style>
 	:root {
-		--bg-color: #F8FAFC;
-		--surface-color: #B8D4ED;
+		--bg-color: #f8fafc;
+		--surface-color: #b8d4ed;
 		--primary-color: #00aaff;
 		--text-color: #000000;
 		--text-muted-color: #121212;
