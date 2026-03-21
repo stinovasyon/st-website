@@ -11,12 +11,14 @@
 </main>
 
 <footer>
-	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
-	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
-			>www.stinovasyon.com</a
-		>
-	</p>
+	<div class="footer-content">
+		<p class="copyright">© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
+		<p>
+			Web sitesi: <a href="https://www.stinovasyon.com" target="_blank" rel="noreferrer"
+				>www.stinovasyon.com</a
+			>
+		</p>
+	</div>
 </footer>
 
 <style>
@@ -25,8 +27,8 @@
 	}
 
 	:global(body) {
-		background-color: var(--bg-color);
-		color: var(--text-color);
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
@@ -37,41 +39,64 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
-		max-width: 1024px;
+		max-width: 1200px;
 		margin: 0 auto;
+		padding: 2rem 1.5rem;
 		box-sizing: border-box;
 	}
 
 	footer {
+		background: var(--bg-secondary);
+		padding: 2.5rem 1.5rem;
+		margin-top: auto;
+	}
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+		gap: 0.5rem;
+		background: var(--bg-primary);
+		border-radius: 24px;
+		padding: 2rem;
+		box-shadow: var(--shadow-raised);
+	}
+
+	footer p {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 0.9rem;
 	}
 
 	footer a {
-		font-weight: bold;
+		color: var(--primary-color);
+		font-weight: 600;
+		transition: color 0.2s ease;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
+	footer a:hover {
+		color: var(--primary-hover);
+	}
+
+	@media (max-width: 640px) {
+		main {
+			padding: 1.5rem 1rem;
 		}
-	}
 
-	@media (max-width: 600px) {
 		footer {
-			padding: 24px 16px;
-			gap: 6px;
-			text-align: center;
+			padding: 1.5rem 1rem;
+		}
+
+		.footer-content {
+			padding: 1.5rem;
+			border-radius: 20px;
 		}
 
 		footer p {
-			margin: 0;
-			font-size: 0.95rem;
+			font-size: 0.85rem;
 		}
 	}
 </style>
