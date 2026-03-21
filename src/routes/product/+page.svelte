@@ -78,7 +78,7 @@
 	.page-header p {
 		color: var(--text-muted-color);
 		font-size: 1.15rem;
-		margin: 0;
+		margin: 0 auto;
 	}
 
 	.features-grid {
