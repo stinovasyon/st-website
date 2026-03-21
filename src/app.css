@@ -1,24 +1,48 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--bg-color: #f8fafc;
-	--surface-color: #b8d4ed;
-	--primary-color: #00aaff;
-	--text-color: #000000;
-	--text-muted-color: #121212;
-	--border-color: #333;
+	--bg-primary: #0d0d0d;
+	--bg-secondary: #1a1a2e;
+	--bg-card: #16213e;
+	--surface-color: #0f0f23;
+	--primary-color: #00ff88;
+	--primary-glow: rgba(0, 255, 136, 0.5);
+	--accent-color: #ff00ff;
+	--accent-glow: rgba(255, 0, 255, 0.5);
+	--neon-cyan: #00ffff;
+	--neon-pink: #ff0080;
+	--neon-yellow: #ffff00;
+	--text-primary: #e0e0e0;
+	--text-secondary: #a0a0a0;
+	--text-muted-color: #606060;
+	--border-color: #00ff88;
+	--border-glow: rgba(0, 255, 136, 0.3);
 	--pure-white: #ffffff;
-	--accent-color: #ff3e00;
-	--font-mono: 'Fira Mono', monospace;
+	--font-mono: 'Fira Code', 'Fira Mono', monospace;
 	font-family:
-		-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-		'Helvetica Neue', sans-serif;
+		'Orbitron',
+		'Rajdhani',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		sans-serif;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
 	min-height: 100vh;
 	margin: 0;
-	background-color: var(--bg-color);
+	background: var(--bg-primary);
+	color: var(--text-primary);
+	line-height: 1.6;
+	background-image:
+		linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+	background-size: 50px 50px;
 }
 
 #svelte {
@@ -30,21 +54,32 @@ body {
 a {
 	color: var(--primary-color);
 	text-decoration: none;
+	text-shadow: 0 0 10px var(--primary-glow);
+	transition: all 0.3s ease;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: var(--neon-cyan);
+	text-shadow:
+		0 0 10px var(--neon-cyan),
+		0 0 20px var(--neon-cyan),
+		0 0 40px var(--neon-cyan);
+	text-decoration: none;
 }
 
 pre {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
+	background: var(--bg-card);
+	border: 1px solid var(--primary-color);
+	border-radius: 0;
+	padding: 1em;
 	overflow-x: auto;
-	color: var(--text-color);
+	color: var(--primary-color);
+	text-shadow: 0 0 5px var(--primary-glow);
+	box-shadow:
+		0 0 10px var(--primary-glow),
+		inset 0 0 10px rgba(0, 255, 136, 0.1);
 }
 
 input,
@@ -55,4 +90,30 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
+}
+
+::selection {
+	background: var(--primary-color);
+	color: var(--bg-primary);
+	text-shadow: none;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	border-radius: 0;
+	box-shadow: 0 0 10px var(--primary-glow);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--neon-cyan);
+	box-shadow: 0 0 15px var(--neon-cyan);
 }

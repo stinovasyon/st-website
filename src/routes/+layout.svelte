@@ -11,12 +11,14 @@
 </main>
 
 <footer>
-	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
-	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
-			>www.stinovasyon.com</a
-		>
-	</p>
+	<div class="footer-content">
+		<p class="copyright">© 2023-2026 ST İNOVASYON</p>
+		<p>
+			Web sitesi: <a href="https://www.stinovasyon.com" target="_blank" rel="noreferrer"
+				>www.stinovasyon.com</a
+			>
+		</p>
+	</div>
 </footer>
 
 <style>
@@ -25,8 +27,8 @@
 	}
 
 	:global(body) {
-		background-color: var(--bg-color);
-		color: var(--text-color);
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
@@ -37,41 +39,84 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
-		max-width: 1024px;
+		max-width: 1200px;
 		margin: 0 auto;
+		padding: 3rem 2rem;
 		box-sizing: border-box;
 	}
 
 	footer {
+		background: var(--bg-secondary);
+		border-top: 2px solid var(--primary-color);
+		box-shadow: 0 -10px 40px var(--primary-glow);
+		padding: 3rem 2rem;
+		margin-top: auto;
+		position: relative;
+	}
+
+	footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			var(--primary-color),
+			var(--neon-cyan),
+			var(--neon-pink),
+			var(--primary-color),
+			transparent
+		);
+	}
+
+	.footer-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		text-align: center;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+		gap: 0.5rem;
+	}
+
+	footer p {
+		margin: 0;
+		color: var(--text-secondary);
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 	}
 
 	footer a {
-		font-weight: bold;
+		color: var(--primary-color);
+		font-weight: 700;
+		text-shadow: 0 0 10px var(--primary-glow);
+		transition: all 0.3s ease;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
+	footer a:hover {
+		color: var(--neon-cyan);
+		text-shadow:
+			0 0 10px var(--neon-cyan),
+			0 0 20px var(--neon-cyan),
+			0 0 40px var(--neon-cyan);
+	}
+
+	@media (max-width: 640px) {
+		main {
+			padding: 2rem 1.5rem;
 		}
-	}
 
-	@media (max-width: 600px) {
 		footer {
-			padding: 24px 16px;
-			gap: 6px;
-			text-align: center;
+			padding: 2rem 1.5rem;
 		}
 
 		footer p {
-			margin: 0;
-			font-size: 0.95rem;
+			font-size: 0.75rem;
+			letter-spacing: 0.05em;
 		}
 	}
 </style>
