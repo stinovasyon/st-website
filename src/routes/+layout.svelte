@@ -11,12 +11,14 @@
 </main>
 
 <footer>
-	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
-	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
-			>www.stinovasyon.com</a
-		>
-	</p>
+	<div class="footer-content">
+		<p class="copyright">© 2023-2026 ST İNOVASYON</p>
+		<p>
+			Web sitesi: <a href="https://www.stinovasyon.com" target="_blank" rel="noreferrer"
+				>www.stinovasyon.com</a
+			>
+		</p>
+	</div>
 </footer>
 
 <style>
@@ -25,53 +27,67 @@
 	}
 
 	:global(body) {
-		background-color: var(--bg-color);
-		color: var(--text-color);
+		background-color: var(--bg-primary);
+		color: var(--text-primary);
 		margin: 0;
 		padding: 0;
 		font-size: 16px;
-		line-height: 1.6;
+		line-height: 1.4;
 	}
 
 	main {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		padding: 1rem;
 		width: 100%;
-		max-width: 1024px;
+		max-width: 1400px;
 		margin: 0 auto;
+		padding: 0;
 		box-sizing: border-box;
 	}
 
 	footer {
+		background: var(--bg-inverted);
+		border-top: var(--border-thick) solid var(--border-color);
+		padding: 0;
+		margin-top: auto;
+	}
+
+	.footer-content {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 2rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
+		gap: 0.5rem;
+	}
+
+	footer p {
+		margin: 0;
+		color: var(--text-inverted);
+		font-size: 0.875rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	footer a {
-		font-weight: bold;
+		color: var(--accent-color);
+		font-weight: 700;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+	footer a:hover {
+		background: var(--accent-color);
+		color: var(--text-inverted);
 	}
 
-	@media (max-width: 600px) {
-		footer {
-			padding: 24px 16px;
-			gap: 6px;
-			text-align: center;
+	@media (max-width: 640px) {
+		.footer-content {
+			padding: 1.5rem;
 		}
 
 		footer p {
-			margin: 0;
-			font-size: 0.95rem;
+			font-size: 0.75rem;
 		}
 	}
 </style>
