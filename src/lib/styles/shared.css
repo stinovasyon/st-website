@@ -1,40 +1,50 @@
 .page {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 2rem;
 }
 
 .page-header {
 	text-align: center;
-	padding: 3rem 1.5rem;
+	padding: 4rem 2rem 3rem;
 }
 
 .page-header h1 {
-	font-size: clamp(2rem, 4vw, 3rem);
-	color: var(--text-color);
+	font-size: clamp(2.25rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: var(--text-primary);
 	margin: 0 0 1rem;
 	line-height: 1.2;
+	letter-spacing: -0.02em;
 }
 
 .page-header p {
-	color: var(--text-muted-color);
-	max-width: 600px;
+	color: var(--text-secondary);
+	max-width: 640px;
 	margin: 0 auto;
-	font-size: 1.1rem;
-	line-height: 1.7;
+	font-size: 1.15rem;
+	line-height: 1.75;
 }
 
 .card {
-	background: var(--surface-color);
+	background: var(--bg-card);
 	border: 1px solid var(--border-color);
-	border-radius: 12px;
-	padding: 2.5rem;
+	border-radius: 16px;
+	padding: 2rem;
+	transition:
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.card:hover {
+	border-color: var(--border-highlight);
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	gap: 1.25rem;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
 }
 
 .video-wrapper {
@@ -43,8 +53,9 @@
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
-	border-radius: 8px;
-	margin-top: 1.25rem;
+	border-radius: 12px;
+	margin-top: 1.5rem;
+	border: 1px solid var(--border-color);
 }
 
 .video-wrapper iframe {
@@ -57,95 +68,120 @@
 }
 
 h2 {
-	font-size: 1.6rem;
-	color: var(--primary-color);
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--text-primary);
 	margin: 0 0 1.25rem;
 	padding-bottom: 0.75rem;
 	border-bottom: 1px solid var(--border-color);
 }
 
 h3 {
-	font-size: 1.05rem;
-	color: var(--text-color);
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--text-primary);
 	margin: 0 0 0.5rem;
 }
 
 h4 {
-	font-size: 0.9rem;
-	color: var(--primary-color);
-	margin: 0 0 0.35rem;
+	font-size: 0.85rem;
 	font-weight: 600;
+	color: var(--primary-color);
+	margin: 0 0 0.5rem;
 	text-transform: uppercase;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.08em;
 }
 
 p {
-	color: var(--text-muted-color);
-	line-height: 1.7;
+	color: var(--text-secondary);
+	line-height: 1.75;
 	margin: 0;
 }
 
 .btn {
-	display: inline-block;
-	background: var(--primary-color);
-	color: var(--bg-color);
-	padding: 0.75rem 2rem;
-	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+	color: var(--pure-white);
+	padding: 0.875rem 2rem;
+	border-radius: 10px;
 	text-decoration: none;
 	font-weight: 600;
 	font-size: 1rem;
-	transition: opacity 0.2s;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+	box-shadow: 0 4px 14px var(--primary-glow);
 }
 
 .btn:hover {
-	opacity: 0.85;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px var(--primary-glow);
+	color: var(--pure-white);
 	text-decoration: none;
 }
 
 input {
 	flex: 1;
 	min-width: 200px;
-	padding: 0.6rem 1rem;
-	background: var(--bg-color);
+	padding: 0.75rem 1rem;
+	background: var(--bg-secondary);
 	border: 1px solid var(--border-color);
-	border-radius: 6px;
-	color: var(--text-color);
+	border-radius: 10px;
+	color: var(--text-primary);
 	font-size: 0.95rem;
+	transition:
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+input::placeholder {
+	color: var(--text-muted-color);
 }
 
 input:focus {
 	outline: none;
 	border-color: var(--primary-color);
+	box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
 button {
-	padding: 0.5rem 1.1rem;
-	background: var(--bg-color);
+	padding: 0.6rem 1.25rem;
+	background: var(--bg-elevated);
 	border: 1px solid var(--border-color);
-	border-radius: 20px;
-	color: var(--text-muted-color);
+	border-radius: 10px;
+	color: var(--text-secondary);
 	font-size: 0.9rem;
+	font-weight: 500;
 	cursor: pointer;
 	transition:
-		background 0.2s,
-		color 0.2s,
-		border-color 0.2s;
+		background 0.2s ease,
+		color 0.2s ease,
+		border-color 0.2s ease,
+		transform 0.15s ease;
 }
 
-button:hover,
+button:hover {
+	background: var(--primary-color);
+	border-color: var(--primary-color);
+	color: var(--pure-white);
+	transform: translateY(-1px);
+}
+
 button.active {
 	background: var(--primary-color);
 	border-color: var(--primary-color);
-	color: var(--bg-color);
+	color: var(--pure-white);
 }
 
 @media (max-width: 600px) {
 	.page-header {
-		padding: 2rem 1rem;
+		padding: 2.5rem 1rem 2rem;
 	}
 
 	h1 {
-		font-size: 1.8rem;
+		font-size: 1.875rem;
 	}
 
 	.card {
@@ -153,10 +189,14 @@ button.active {
 	}
 
 	h2 {
-		font-size: 1.4rem;
+		font-size: 1.25rem;
 	}
 
 	.page-header p {
 		font-size: 1rem;
+	}
+
+	.grid {
+		grid-template-columns: 1fr;
 	}
 }
