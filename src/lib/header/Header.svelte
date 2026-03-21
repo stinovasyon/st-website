@@ -1,171 +1,148 @@
-<script>
-// @ts-nocheck
-
+<script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './st-logo.png';
+
+	const pathname = () => $page.url.pathname as string;
 </script>
 
 <header>
-	<div class="corner">
-	</div>
+	<div class="header-content">
+		<a href="/" class="logo">
+			<img src={logo} alt="ST İnovasyon Logo" />
+			<span class="logo-text">ST İnovasyon</span>
+		</a>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<!-- svelte-ignore attribute_illegal_colon -->
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Açılış</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/about">Hakkında</a>
-			</li>
-			<li class:active={$page.url.pathname === '/reference'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/reference">Referanslar</a>
-			</li>
-
-			<li class:active={$page.url.pathname === '/product'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/product">Ürün</a>
-			</li>
-			<li class:active={$page.url.pathname === '/contact'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/contact">İletişim</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<nav>
+			<ul>
+				<li class:active={pathname() === '/'}>
+					<a href="/">Açılış</a>
+				</li>
+				<li class:active={pathname() === '/about'}>
+					<a href="/about">Hakkında</a>
+				</li>
+				<li class:active={pathname() === '/reference'}>
+					<a href="/reference">Referanslar</a>
+				</li>
+				<li class:active={pathname() === '/product'}>
+					<a href="/product">Ürün</a>
+				</li>
+				<li class:active={pathname() === '/contact'}>
+					<a href="/contact">İletişim</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
-	}
-
-	ul {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
+		background: var(--bg-primary);
+		border-bottom: 1px solid var(--border-color);
+		position: sticky;
 		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
+		z-index: 100;
+	}
+
+	.header-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 72px;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		text-decoration: none;
+	}
+
+	.logo:hover {
+		text-decoration: none;
+	}
+
+	.logo img {
+		width: 36px;
+		height: 36px;
+		object-fit: contain;
+	}
+
+	.logo-text {
+		font-size: 1.125rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		letter-spacing: -0.01em;
+	}
+
+	nav ul {
+		display: flex;
+		gap: 0.25rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	nav a {
 		display: flex;
-		height: 100%;
 		align-items: center;
-		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		padding: 0.5rem 1rem;
+		color: var(--text-secondary);
+		font-weight: 500;
+		font-size: 0.875rem;
 		text-decoration: none;
-		transition: color 0.2s linear;
+		border-radius: 4px;
+		transition:
+			color 0.2s ease,
+			background 0.2s ease;
 	}
 
-	a:hover {
-		color: var(--accent-color);
+	nav a:hover {
+		color: var(--text-primary);
+		background: var(--bg-secondary);
+		text-decoration: none;
 	}
 
-	@media (max-width: 640px) {
-		header {
-			flex-direction: column;
-			align-items: center;
-			gap: 0.5rem;
+	li.active a {
+		color: var(--text-primary);
+		font-weight: 600;
+	}
+
+	@media (max-width: 768px) {
+		.header-content {
+			height: 64px;
+			padding: 0 1.5rem;
 		}
 
-		.corner {
-			width: 2.5em;
-			height: 2.5em;
-		}
-
-		.corner:last-child {
+		.logo-text {
 			display: none;
 		}
 
-		nav {
-			width: 100%;
-			overflow-x: auto;
-			-webkit-overflow-scrolling: touch;
-			padding: 0 0.5rem;
-		}
-
-		svg {
-			display: none;
-		}
-
-		ul {
-			padding: 0 0.25rem;
-			gap: 0.35rem;
-			scroll-snap-type: x mandatory;
-		}
-
-		li {
-			flex: 0 0 auto;
-			scroll-snap-align: center;
+		.logo img {
+			width: 32px;
+			height: 32px;
 		}
 
 		nav a {
-			padding: 0 0.75em;
-			min-height: 44px;
-			font-size: 0.72rem;
-			letter-spacing: 0.08em;
+			padding: 0.5rem 0.75rem;
+			font-size: 0.8125rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.header-content {
+			padding: 0 1rem;
 		}
 
-		li.active::before {
-			--size: 5px;
+		nav ul {
+			gap: 0;
+		}
+
+		nav a {
+			padding: 0.5rem 0.625rem;
+			font-size: 0.75rem;
 		}
 	}
 </style>
