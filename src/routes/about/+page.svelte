@@ -1,4 +1,3 @@
-
 <svelte:head>
 	<title>Hakkımızda | ST Inovasyon</title>
 	<meta
@@ -9,11 +8,11 @@
 
 <div class="page">
 	<section class="page-header">
-			<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
+		<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
 		<p>
 			ST Inovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün sunum
 			çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri yaratıyor.
-			</p>
+		</p>
 	</section>
 
 	<section class="card">
@@ -62,55 +61,6 @@
 </div>
 
 <style>
-	.page {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.page-header {
-		text-align: center;
-		padding: 3rem 1.5rem;
-	}
-
-
-
-	h1 {
-		font-size: clamp(2rem, 4vw, 3rem);
-		color: var(--text-color);
-		margin: 0 0 1rem;
-		line-height: 1.2;
-	}
-
-	.page-header p {
-		color: var(--text-muted-color);
-		max-width: 650px;
-		margin: 0 auto;
-		font-size: 1.1rem;
-		line-height: 1.7;
-	}
-
-	.card {
-		background: var(--surface-color);
-		border: 1px solid var(--border-color);
-		border-radius: 12px;
-		padding: 2.5rem;
-	}
-
-	h2 {
-		font-size: 1.6rem;
-		color: var(--primary-color);
-		margin: 0 0 1.25rem;
-		padding-bottom: 0.75rem;
-		border-bottom: 1px solid var(--border-color);
-	}
-
-	p {
-		color: var(--text-muted-color);
-		line-height: 1.7;
-		margin: 0;
-	}
-
 	p + p {
 		margin-top: 1rem;
 	}
@@ -118,52 +68,4 @@
 	strong {
 		color: var(--text-color);
 	}
-
-	.video-wrapper {
-		position: relative;
-		width: 100%;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-		border-radius: 8px;
-		margin-top: 1.25rem;
-	}
-
-	.video-wrapper iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border: none;
-	}
-
-
-		
-
-
-	@media (max-width: 600px) {
-		.page-header {
-			padding: 2rem 1rem;
-		}
-
-		.card {
-			padding: 1.5rem;
-		}
-
-		h1 {
-			font-size: 1.8rem;
-		}
-
-
-		h2 {
-			font-size: 1.4rem;
-		}
-		.page-header p {
-			font-size: 1rem;
-		}
-	}
-
-
-
 </style>
