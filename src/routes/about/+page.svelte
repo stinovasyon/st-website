@@ -19,9 +19,9 @@
 	<section class="card">
 		<h2>Patentli Yeniliğimiz</h2>
 		<p>
-			Ürün sunumunun geleceğine hoş geldiniz. Temel buluşumuz, ST Inovasyon Ürün Tanıtım Standı,
+			Ürün sunumunun geleceğine hoş geldiniz. Temel buluşumuz, ZeroG stinovasyon Ürün Tanıtım Standı,
 			dünya çapında eşi benzeri görülmemiş ve patentli bir teknolojidir. Bu teknoloji,
-			<strong>3D, somut, fiziksel nesnelerin</strong> açık alanda zarif bir şekilde dönmesini sağlar ve
+			<strong>3D, somut, fiziksel nesnelerin</strong> farklı ebatlardaki kutular içinde  zarif bir şekilde boşlukda dönmesini sağlar ve
 			herhangi bir görünür destekten bağımsızdır.
 		</p>
 		<p>
