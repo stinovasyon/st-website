@@ -11,7 +11,7 @@
 	<section class="page-header">
 			<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
 		<p>
-			ST Inovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün sunum
+			ZeroG stinovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün sunum
 			çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri yaratıyor.
 			</p>
 	</section>
