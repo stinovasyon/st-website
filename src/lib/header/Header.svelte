@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import logo from './st-logo.png';
 
-	const pathname = () => $page.url.pathname as string;
+	$: pathname = $page.url.pathname as string;
 </script>
 
 <header>
@@ -14,20 +14,20 @@
 
 		<nav>
 			<ul>
-				<li class:active={pathname() === '/'}>
+				<li class:active={pathname === '/'}>
 					<a href="/">Açılış</a>
 				</li>
-				<li class:active={pathname() === '/about'}>
-					<a href="/about">Hakkında</a>
+				<li class:active={pathname === '/about/'}>
+					<a href="/about/">Hakkında</a>
 				</li>
-				<li class:active={pathname() === '/reference'}>
-					<a href="/reference">Referanslar</a>
+				<li class:active={pathname === '/reference/'}>
+					<a href="/reference/">Referanslar</a>
 				</li>
-				<li class:active={pathname() === '/product'}>
-					<a href="/product">Ürün</a>
+				<li class:active={pathname === '/product/'}>
+					<a href="/product/">Ürün</a>
 				</li>
-				<li class:active={pathname() === '/contact'}>
-					<a href="/contact">İletişim</a>
+				<li class:active={pathname === '/contact/'}>
+					<a href="/contact/">İletişim</a>
 				</li>
 			</ul>
 		</nav>
