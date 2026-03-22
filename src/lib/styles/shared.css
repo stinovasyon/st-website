@@ -7,7 +7,6 @@
 .page-header {
 	text-align: left;
 	padding: 3rem 2rem;
-	border-bottom: var(--border-thick) solid var(--border-color);
 }
 
 .page-header h1 {
@@ -30,36 +29,32 @@
 
 .card {
 	background: var(--bg-secondary);
-	border: var(--border-thick) solid var(--border-color);
+	border: 2px solid var(--border-color);
 	border-radius: 0;
 	padding: 2rem;
-	box-shadow: 8px 8px 0 var(--border-color);
+	margin-bottom: 1.5rem;
+	box-shadow: none;
 	transition: all 0.1s ease;
 }
 
 .card:hover {
-	transform: translate(-4px, -4px);
-	box-shadow: 12px 12px 0 var(--border-color);
+	transform: translate(-1px, -1px);
 }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 0;
-}
-
-.grid > .card {
-	margin: -var(--border-thick) 0 0 calc(-1 * var(--border-thick));
+	gap: 2rem;
 }
 
 .video-wrapper {
 	position: relative;
-	width: 100%;
+	width: calc(100% - 2rem);
+	margin: 1rem;
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
-	border: var(--border-thick) solid var(--border-color);
-	margin-top: 1.5rem;
+	border: 2px solid var(--border-color);
 }
 
 .video-wrapper iframe {
@@ -108,7 +103,7 @@ p {
 	background: var(--primary-color);
 	color: var(--text-inverted);
 	padding: 1rem 2rem;
-	border: var(--border-thick) solid var(--border-color);
+	border: 2px solid var(--border-color);
 	border-radius: 0;
 	text-decoration: none;
 	font-weight: 700;
@@ -137,7 +132,7 @@ input {
 	min-width: 200px;
 	padding: 0.875rem 1rem;
 	background: var(--bg-secondary);
-	border: var(--border-thick) solid var(--border-color);
+	border: 2px solid var(--border-color);
 	border-radius: 0;
 	color: var(--text-primary);
 	font-size: 1rem;
@@ -157,7 +152,7 @@ input:focus {
 button {
 	padding: 0.75rem 1.5rem;
 	background: var(--bg-secondary);
-	border: var(--border-thick) solid var(--border-color);
+	border: 2px solid var(--border-color);
 	border-radius: 0;
 	color: var(--text-primary);
 	font-size: 0.875rem;
@@ -208,7 +203,7 @@ button.active {
 	}
 
 	.grid {
-		gap: 0;
+		gap: 1.5rem;
 	}
 
 	.btn {
