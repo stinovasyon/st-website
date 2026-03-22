@@ -1,33 +1,39 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { afterNavigate } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import logo from './st-logo.png';
 
-	const pathname = () => $page.url.pathname as string;
+	let currentPath = '/';
+
+	afterNavigate(() => {
+		currentPath = $page.url.pathname;
+	});
 </script>
 
 <header>
 	<div class="header-content">
-		<a href="/" class="logo">
+		<a href={resolve('/')} class="logo">
 			<img src={logo} alt="ST İnovasyon Logo" />
 			<span class="logo-text">ST İNOVASYON</span>
 		</a>
 
 		<nav>
 			<ul>
-				<li class:active={pathname() === '/'}>
-					<a href="/">Açılış</a>
+				<li class:active={currentPath === '/' || currentPath === ''}>
+					<a href={resolve('/')}>Açılış</a>
 				</li>
-				<li class:active={pathname() === '/about'}>
-					<a href="/about">Hakkında</a>
+				<li class:active={currentPath.startsWith('/about')}>
+					<a href={resolve('/about/')}>Hakkında</a>
 				</li>
-				<li class:active={pathname() === '/reference'}>
-					<a href="/reference">Referanslar</a>
+				<li class:active={currentPath.startsWith('/reference')}>
+					<a href={resolve('/reference/')}>Referanslar</a>
 				</li>
-				<li class:active={pathname() === '/product'}>
-					<a href="/product">Ürün</a>
+				<li class:active={currentPath.startsWith('/product')}>
+					<a href={resolve('/product/')}>Ürün</a>
 				</li>
-				<li class:active={pathname() === '/contact'}>
-					<a href="/contact">İletişim</a>
+				<li class:active={currentPath.startsWith('/contact')}>
+					<a href={resolve('/contact/')}>İletişim</a>
 				</li>
 			</ul>
 		</nav>
