@@ -1,37 +1,40 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
 	import { page } from '$app/stores';
+	import { afterNavigate } from '$app/navigation';
+	import { resolve } from '$app/paths';
 	import logo from './st-logo.png';
+
+	let currentPath = '/';
+
+	afterNavigate(() => {
+		currentPath = $page.url.pathname;
+	});
 </script>
 
 <header>
-	<div class="corner">
-	</div>
+	<div class="corner"></div>
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<!-- svelte-ignore attribute_illegal_colon -->
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Açılış</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/about">Hakkında</a>
+			<li class:active={currentPath === '/' || currentPath === ''}>
+				<a sveltekit:prefetch href={resolve('/')}>Açılış</a>
 			</li>
-			<li class:active={$page.url.pathname === '/reference'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/reference">Referanslar</a>
+			<li class:active={currentPath.startsWith('/about')}>
+				<a sveltekit:prefetch href={resolve('/about/')}>Hakkında</a>
 			</li>
-
-			<li class:active={$page.url.pathname === '/product'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/product">Ürün</a>
+			<li class:active={currentPath.startsWith('/reference')}>
+				<a sveltekit:prefetch href={resolve('/reference/')}>Referanslar</a>
 			</li>
-			<li class:active={$page.url.pathname === '/contact'}>
-				<!-- svelte-ignore attribute_illegal_colon -->
-				<a sveltekit:prefetch href="/contact">İletişim</a>
+			<li class:active={currentPath.startsWith('/product')}>
+				<a sveltekit:prefetch href={resolve('/product/')}>Ürün</a>
+			</li>
+			<li class:active={currentPath.startsWith('/contact')}>
+				<a sveltekit:prefetch href={resolve('/contact/')}>İletişim</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
