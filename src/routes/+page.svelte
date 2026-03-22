@@ -1,17 +1,20 @@
 <svelte:head>
 	<title>ST İnovasyon | ZeroG</title>
-	<meta name="description" content="ZeroG — patentli ürün sergileme platformu. Gerçek ürünler, benzersiz görsel deneyim." />
+	<meta
+		name="description"
+		content="ZeroG — patentli ürün sergileme platformu. Gerçek ürünler, benzersiz görsel deneyim."
+	/>
 </svelte:head>
 
 <div class="page">
-
 	<section class="card">
 		<h2>ZeroG Nedir?</h2>
 		<p>
-			ZeroG, patentli bir ürün sergileme platformudur. Dünyada eşsizdir. Kuruluşların değerli
-			eşyalarını sergilemelerine ve izleyicilere benzersiz ve unutulmaz bir görsel deneyim
-			sunmalarına yardımcı olmak için tasarlanmıştır; ürünler dijital veya holografik değil,
-			gerçek ürünlerdir.
+			ZeroG, (stinovasyon) patentli bir ürün sergileme platformudur. Dünyada eşsizdir. Reklam
+			ajanslarının, markaların, üretici firmaların ve kuruluşların ürünlerini tanıtım reklam ve
+			pazarlama amacı ile sıradışı sergilemelerine ve izleyicilere benzersiz ve unutulmaz bir görsel
+			deneyim sunmalarına yardımcı olmak için tasarlanmıştır; ürünler dijital veya holografik değil,
+			gerçek ürünlerdir..
 		</p>
 	</section>
 
@@ -31,8 +34,8 @@
 
 	<section class="card tagline-card">
 		<p class="tagline">
-			Tarvity'nin kutusu, nesneleri havaya kaldırdığı için değil, etrafına insanları yoğun bir
-			şekilde çektiği için sihirli.
+			ZeroG'nin sihirli kutusu, nesneleri havaya kaldırdığı için değil, etrafına insanları yoğun bir
+			şekilde çektiği için gizemli.
 		</p>
 		<h3 class="tagline-info">Salih TURHAL</h3>
 	</section>
@@ -40,33 +43,72 @@
 	<section class="card">
 		<h2>Referanslarımız</h2>
 		<div class="refs-grid">
-			<a href="https://www.youtube.com/watch?v=ime8da_ne8s" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=ime8da_ne8s"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="vakko-logo.png" alt="Vakko" />
 			</a>
-			<a href="https://www.youtube.com/watch?v=L_YILEbWQD4" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=L_YILEbWQD4"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="loreal-logo.png" alt="L'Oréal" />
 			</a>
-			<a href="https://www.youtube.com/watch?v=hv08PzUvD44" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=hv08PzUvD44"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="folli-follie-logo.png" alt="Folli Follie" />
 			</a>
-			<a href="https://www.youtube.com/@zerog-stinovasyon9768/videos" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="trt_1_logo_2021.png" alt="TRT 1" />
 			</a>
-			<a href="https://www.youtube.com/@zerog-stinovasyon9768/videos" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
 			</a>
-			<a href="https://www.youtube.com/watch?v=C00ovZf8wOU" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=C00ovZf8wOU"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="aselsan-logo.png" alt="Aselsan" />
 			</a>
-			<a href="https://www.youtube.com/watch?v=DuoOqC57cN0" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=DuoOqC57cN0"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="ankamall-logo.png" alt="Ankamall" />
 			</a>
-			<a href="https://www.youtube.com/watch?v=YpN-C2dsUzU" target="_blank" rel="noreferrer" class="ref-link">
+			<a
+				href="https://www.youtube.com/watch?v=YpN-C2dsUzU"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
 				<img src="tekmar-logo.png" alt="Tekmar" />
 			</a>
 		</div>
 	</section>
-
 </div>
 
 <style>
@@ -151,7 +193,9 @@
 		border: 1px solid var(--border-color);
 		border-radius: 8px;
 		padding: 1rem;
-		transition: opacity 0.2s, transform 0.2s;
+		transition:
+			opacity 0.2s,
+			transform 0.2s;
 	}
 
 	.ref-link:hover {
@@ -168,7 +212,6 @@
 	}
 
 	@media (max-width: 600px) {
-
 		.card {
 			padding: 1.5rem;
 		}
