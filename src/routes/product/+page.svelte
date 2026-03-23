@@ -88,36 +88,11 @@
 </div>
 
 <style>
-	.page {
-		display: flex;
-		flex-direction: column;
-
-		gap: 1.5rem;
-	}
-
-	.page-header {
-		text-align: center;
-		padding: 3rem 1.5rem;
-	}
-
 	h1 {
 		font-size: clamp(2rem, 4vw, 3rem);
 		color: var(--text-color);
 		margin: 0 0 0.75rem;
 		line-height: 1.2;
-	}
-
-	.page-header p {
-		color: var(--text-muted-color);
-		font-size: 1.15rem;
-		margin: 0;
-	}
-
-	.card {
-		background: var(--surface-color);
-		border: 1px solid var(--border-color);
-		border-radius: 12px;
-		padding: 2.5rem;
 	}
 
 	h2 {
@@ -169,13 +144,6 @@
 		font-size: 0.95rem;
 	}
 
-	p {
-		color: var(--text-muted-color);
-		line-height: 1.6;
-		margin: 0;
-		font-size: 0.95rem;
-	}
-
 	.cta {
 		text-align: center;
 	}
@@ -210,13 +178,6 @@
 	}
 
 	@media (max-width: 600px) {
-		.page-header {
-			padding: 2rem 1rem;
-		}
-		.card {
-			padding: 1.5rem;
-		}
-
 		h1 {
 			font-size: 1.8rem;
 		}

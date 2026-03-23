@@ -1,33 +1,75 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+	import { onMount } from 'svelte';
+
+	let { children } = $props();
+
+	let theme = $state('light');
+
+	onMount(() => {
+		const savedTheme = localStorage.getItem('theme');
+		if (savedTheme) {
+			theme = savedTheme;
+		}
+	});
+
+	function toggleTheme() {
+		theme = theme === 'light' ? 'dark' : 'light';
+		localStorage.setItem('theme', theme);
+	}
 </script>
 
-<Header />
+<div data-theme={theme} class="theme-wrapper">
+	<button class="theme-toggle" onclick={toggleTheme} aria-label="Toggle theme">
+		{theme === 'light' ? '🌙' : '☀️'}
+	</button>
 
-<main>
-	<slot />
-</main>
+	<Header />
 
-<footer>
-	<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
-	<p>
-		Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank">www.stinovasyon.com</a>
-	</p>
-</footer>
+	<main>
+		{@render children()}
+	</main>
+
+	<footer>
+		<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
+		<p>
+			Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
+				>www.stinovasyon.com</a
+			>
+		</p>
+	</footer>
+</div>
 
 <style>
-	:root {
-		--bg-color: #f8fafc;
-		--surface-color: #b8d4ed;
-		--primary-color: #00aaff;
-		--text-color: #000000;
-		--text-muted-color: #121212;
-		--border-color: #333;
+	.theme-wrapper {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+	}
 
-		font-family:
-			-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
-			'Helvetica Neue', sans-serif;
+	.theme-toggle {
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
+		z-index: 1000;
+		background: var(--surface-color);
+		border: 1px solid var(--border-color);
+		border-radius: 50%;
+		width: 44px;
+		height: 44px;
+		cursor: pointer;
+		font-size: 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition:
+			background 0.2s,
+			transform 0.2s;
+	}
+
+	.theme-toggle:hover {
+		transform: scale(1.1);
 	}
 
 	:global(html) {

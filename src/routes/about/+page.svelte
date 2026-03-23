@@ -1,4 +1,3 @@
-
 <svelte:head>
 	<title>Hakkımızda | ST Inovasyon</title>
 	<meta
@@ -9,20 +8,21 @@
 
 <div class="page">
 	<section class="page-header">
-			<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
+		<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
 		<p>
-			ZeroG stinovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün sunum
-			çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri oluşturuyor.
-			</p>
+			ZeroG stinovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün
+			sunum çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri
+			oluşturuyor.
+		</p>
 	</section>
 
 	<section class="card">
 		<h2>Patentli Yeniliğimiz</h2>
 		<p>
-			Ürün sunumunun geleceğine hoş geldiniz. Temel buluşumuz, ZeroG stinovasyon Ürün Tanıtım Standı,
-			dünya çapında eşi benzeri görülmemiş ve patentli bir teknolojidir. Bu teknoloji,
-			<strong>3D, somut, fiziksel nesnelerin</strong> farklı ebatlardaki kutular içinde  zarif bir şekilde boşlukda dönmesini sağlar ve
-			herhangi bir görünür destekten bağımsızdır.
+			Ürün sunumunun geleceğine hoş geldiniz. Temel buluşumuz, ZeroG stinovasyon Ürün Tanıtım
+			Standı, dünya çapında eşi benzeri görülmemiş ve patentli bir teknolojidir. Bu teknoloji,
+			<strong>3D, somut, fiziksel nesnelerin</strong> farklı ebatlardaki kutular içinde zarif bir şekilde
+			boşlukda dönmesini sağlar ve herhangi bir görünür destekten bağımsızdır.
 		</p>
 		<p>
 			Bu bir hologram, bir projeksiyon veya sanal bir hile değildir. Bu, yeniden hayal edilmiş bir
@@ -62,39 +62,11 @@
 </div>
 
 <style>
-	.page {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.page-header {
-		text-align: center;
-		padding: 3rem 1.5rem;
-	}
-
-
-
 	h1 {
 		font-size: clamp(2rem, 4vw, 3rem);
 		color: var(--text-color);
 		margin: 0 0 1rem;
 		line-height: 1.2;
-	}
-
-	.page-header p {
-		color: var(--text-muted-color);
-		max-width: 650px;
-		margin: 0 auto;
-		font-size: 1.1rem;
-		line-height: 1.7;
-	}
-
-	.card {
-		background: var(--surface-color);
-		border: 1px solid var(--border-color);
-		border-radius: 12px;
-		padding: 2.5rem;
 	}
 
 	h2 {
@@ -103,16 +75,6 @@
 		margin: 0 0 1.25rem;
 		padding-bottom: 0.75rem;
 		border-bottom: 1px solid var(--border-color);
-	}
-
-	p {
-		color: var(--text-muted-color);
-		line-height: 1.7;
-		margin: 0;
-	}
-
-	p + p {
-		margin-top: 1rem;
 	}
 
 	strong {
@@ -138,32 +100,13 @@
 		border: none;
 	}
 
-
-		
-
-
 	@media (max-width: 600px) {
-		.page-header {
-			padding: 2rem 1rem;
-		}
-
-		.card {
-			padding: 1.5rem;
-		}
-
 		h1 {
 			font-size: 1.8rem;
 		}
 
-
 		h2 {
 			font-size: 1.4rem;
 		}
-		.page-header p {
-			font-size: 1rem;
-		}
 	}
-
-
-
 </style>

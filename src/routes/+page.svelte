@@ -112,19 +112,6 @@
 </div>
 
 <style>
-	.page {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.card {
-		background: var(--surface-color);
-		border: 1px solid var(--border-color);
-		border-radius: 12px;
-		padding: 2.5rem;
-	}
-
 	.tagline-card {
 		text-align: center;
 	}
@@ -151,12 +138,6 @@
 		margin: 0 0 1.25rem;
 		padding-bottom: 0.75rem;
 		border-bottom: 1px solid var(--border-color);
-	}
-
-	p {
-		color: var(--text-muted-color);
-		line-height: 1.7;
-		margin: 0;
 	}
 
 	.video-wrapper {
@@ -212,10 +193,6 @@
 	}
 
 	@media (max-width: 600px) {
-		.card {
-			padding: 1.5rem;
-		}
-
 		h2 {
 			font-size: 1.4rem;
 		}

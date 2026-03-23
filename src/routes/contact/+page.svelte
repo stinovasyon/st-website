@@ -52,17 +52,6 @@
 </div>
 
 <style>
-	.page {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.page-header {
-		text-align: center;
-		padding: 3rem 1.5rem;
-	}
-
 	h1 {
 		font-size: clamp(2rem, 4vw, 3rem);
 		color: var(--text-color);
@@ -70,25 +59,10 @@
 		line-height: 1.2;
 	}
 
-	.page-header p {
-		color: var(--text-muted-color);
-		max-width: 600px;
-		margin: 0 auto;
-		font-size: 1.1rem;
-		line-height: 1.7;
-	}
-
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 		gap: 1.25rem;
-	}
-
-	.card {
-		background: var(--surface-color);
-		border: 1px solid var(--border-color);
-		border-radius: 12px;
-		padding: 1.75rem;
 	}
 
 	h2 {
@@ -120,18 +94,8 @@
 	}
 
 	@media (max-width: 600px) {
-		.page-header {
-			padding: 2rem 1rem;
-		}
 		h1 {
 			font-size: 1.8rem;
-		}
-		.page-header p {
-			font-size: 1rem;
-		}
-
-		.card {
-			padding: 1.25rem;
 		}
 	}
 </style>
