@@ -4,7 +4,6 @@
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 	import { resolve } from '$app/paths';
-	import logo from './st-logo.png';
 
 	let currentPath = '/';
 
@@ -22,19 +21,19 @@
 		</svg>
 		<ul>
 			<li class:active={currentPath === '/' || currentPath === ''}>
-				<a sveltekit:prefetch href={resolve('/')}>Açılış</a>
+				<a data-sveltekit-preload-data="hover" href={resolve('/')}>Açılış</a>
 			</li>
 			<li class:active={currentPath.startsWith('/about')}>
-				<a sveltekit:prefetch href={resolve('/about/')}>Hakkında</a>
+				<a data-sveltekit-preload-data="hover" href={resolve('/about/')}>Hakkında</a>
 			</li>
 			<li class:active={currentPath.startsWith('/reference')}>
-				<a sveltekit:prefetch href={resolve('/reference/')}>Referanslar</a>
+				<a data-sveltekit-preload-data="hover" href={resolve('/reference/')}>Referanslar</a>
 			</li>
 			<li class:active={currentPath.startsWith('/product')}>
-				<a sveltekit:prefetch href={resolve('/product/')}>Ürün</a>
+				<a data-sveltekit-preload-data="hover" href={resolve('/product/')}>Ürün</a>
 			</li>
 			<li class:active={currentPath.startsWith('/contact')}>
-				<a sveltekit:prefetch href={resolve('/contact/')}>İletişim</a>
+				<a data-sveltekit-preload-data="hover" href={resolve('/contact/')}>İletişim</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
