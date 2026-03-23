@@ -97,7 +97,6 @@
 
 	h2 {
 		font-size: 1.6rem;
-		color: var(--primary-color);
 		margin: 0 0 1.5rem;
 		padding-bottom: 0.75rem;
 		border-bottom: 1px solid var(--border-color);

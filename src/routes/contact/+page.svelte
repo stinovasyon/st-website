@@ -66,8 +66,6 @@
 	}
 
 	h2 {
-		font-size: 1.2rem;
-		color: var(--primary-color);
 		margin: 0 0 1rem;
 		padding-bottom: 0.6rem;
 		border-bottom: 1px solid var(--border-color);

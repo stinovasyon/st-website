@@ -12,15 +12,17 @@
 		if (savedTheme) {
 			theme = savedTheme;
 		}
+		document.documentElement.setAttribute('data-theme', theme);
 	});
 
 	function toggleTheme() {
 		theme = theme === 'light' ? 'dark' : 'light';
 		localStorage.setItem('theme', theme);
+		document.documentElement.setAttribute('data-theme', theme);
 	}
 </script>
 
-<div data-theme={theme} class="theme-wrapper">
+<div class="theme-wrapper">
 	<button class="theme-toggle" onclick={toggleTheme} aria-label="Toggle theme">
 		{theme === 'light' ? '🌙' : '☀️'}
 	</button>

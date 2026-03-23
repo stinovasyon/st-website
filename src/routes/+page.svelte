@@ -133,8 +133,6 @@
 	}
 
 	h2 {
-		font-size: 1.6rem;
-		color: var(--primary-color);
 		margin: 0 0 1.25rem;
 		padding-bottom: 0.75rem;
 		border-bottom: 1px solid var(--border-color);
@@ -193,9 +191,6 @@
 	}
 
 	@media (max-width: 600px) {
-		h2 {
-			font-size: 1.4rem;
-		}
 
 		.tagline {
 			font-size: 1.05rem;
