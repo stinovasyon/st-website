@@ -42,7 +42,7 @@
 		</p>
 		<p>
 			Teknolojimizi kullanarak, şirketler güçlü bir marka kimliği oluşturma kritik zorluğunu
-			aşabilir ve kalite, yenilik ve hayranlık izlenimi bırakan kalıcı bir etki yaratabilirler.
+			aşabilir ve kalite, yenilik ve hayranlık izlenimi bırakan kalıcı bir etki oluşturabilir.
 		</p>
 	</section>
 
