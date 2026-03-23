@@ -2,6 +2,7 @@
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { initLocale, t } from '$lib/i18n';
 
 	let { children } = $props();
 
@@ -13,6 +14,8 @@
 			theme = savedTheme;
 		}
 		document.documentElement.setAttribute('data-theme', theme);
+
+		initLocale();
 	});
 
 	function toggleTheme() {
@@ -34,9 +37,10 @@
 	</main>
 
 	<footer>
-		<p>© 2023-2026 ST İnovasyon. Tüm hakları saklıdır.</p>
+		<p>{$t('footer.copyright')}</p>
 		<p>
-			Web sitesi: <a href="https://www.stinovasyon.com" class="website-link" target="_blank"
+			{$t('footer.website')}
+			<a href="https://www.stinovasyon.com" class="website-link" target="_blank"
 				>www.stinovasyon.com</a
 			>
 		</p>

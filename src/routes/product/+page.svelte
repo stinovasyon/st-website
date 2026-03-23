@@ -1,88 +1,88 @@
+<script>
+	import { t } from '$lib/i18n';
+</script>
+
 <svelte:head>
-	<title>Ürün Özellikleri | ST İnovasyon</title>
-	<meta name="description" content="ST İnovasyon modüler ve esnek ürün çözümleri" />
+	<title>{$t('product.title')}</title>
+	<meta name="description" content={$t('product.metaDescription')} />
 </svelte:head>
 
 <div class="page">
 	<section class="page-header">
-		<h1>ST İnovasyon</h1>
-		<p>Modüler ve Esnek Ürün Çözümleri</p>
+		<h1>{$t('product.titleMain')}</h1>
+		<p>{$t('product.subtitle')}</p>
 	</section>
 
 	<section class="card">
-		<h2>Özellikler</h2>
+		<h2>{$t('product.features')}</h2>
 
 		<div class="features-grid">
 			<div class="feature-item">
-				<h3>Esnek Boyutlar</h3>
-				<p>14x14x14 cm'den 220x220x220 cm'ye kadar her boyutta ürün üretimi</p>
+				<h3>{$t('product.flexibleSizes')}</h3>
+				<p>{$t('product.flexibleSizesDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Modüler Yapı</h3>
-				<p>İçinde birden fazla ürün aynı anda hareket edebilir</p>
+				<h3>{$t('product.modularStructure')}</h3>
+				<p>{$t('product.modularStructureDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Çoklu Kurulum</h3>
-				<p>Duvara gömülebilir, tavana asılabilir, tezgah üstü konulabilir</p>
+				<h3>{$t('product.multipleInstallations')}</h3>
+				<p>{$t('product.multipleInstallationsDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Şarjlı Opsiyon</h3>
-				<p>Şarjlı olabilir, kolay kullanım sunar</p>
+				<h3>{$t('product.rechargeableOption')}</h3>
+				<p>{$t('product.rechargeableOptionDesc')}</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="card">
-		<h2>Ürün Özellikleri</h2>
+		<h2>{$t('product.specs')}</h2>
 		<div class="features-grid">
 			<div class="feature-item">
-				<h3>Şekil ve Yapı</h3>
-				<p>Tüm ürünler küp ve dikdörtgen prizma şeklindedir</p>
+				<h3>{$t('product.shapeStructure')}</h3>
+				<p>{$t('product.shapeStructureDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Ağırlık</h3>
-				<p>Ağır bir ürün değildir</p>
+				<h3>{$t('product.weight')}</h3>
+				<p>{$t('product.weightDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Dış Yüzey</h3>
-				<p>İstenilen şekilde tasarım yapılabilir</p>
+				<h3>{$t('product.outerSurface')}</h3>
+				<p>{$t('product.outerSurfaceDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>İç İçerik</h3>
-				<p>Metal, ahşap veya plastik olabilir</p>
+				<h3>{$t('product.innerContent')}</h3>
+				<p>{$t('product.innerContentDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Ortam Etkisi</h3>
-				<p>Radyasyon yaymak gibi olumsuz bir etkisi yoktur</p>
+				<h3>{$t('product.environmentEffect')}</h3>
+				<p>{$t('product.environmentEffectDesc')}</p>
 			</div>
 			<div class="feature-item">
-				<h3>Kurulum Alanları</h3>
-				<p>Açık Hava, Kapalı Alan, AVM, Havaalanları, Fuar Alanları</p>
+				<h3>{$t('product.installationAreas')}</h3>
+				<p>{$t('product.installationAreasDesc')}</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="card">
-		<h2>Ticari Alanlar</h2>
+		<h2>{$t('product.commercialAreas')}</h2>
 		<ul class="commercial-list">
-			<li>Yurtdışı distribütörlüğü</li>
-			<li>Uluslararası firmalarla lisans anlaşması</li>
-			<li>
-				Reklam ajansları ile AVM'ler, fuar alanları, havaalanları vb. yerlerde yeni bir reklam
-				mercii oluşturmak
-			</li>
-			<li>Promosyon ve hediyelik eşya sektöründe çoklu adetlerde anlaşmalar</li>
+			<li>{$t('product.distributor')}</li>
+			<li>{$t('product.licenseAgreement')}</li>
+			<li>{$t('product.advertising')}</li>
+			<li>{$t('product.promotional')}</li>
 		</ul>
 	</section>
 
 	<section class="card cta">
-		<h2>ST İnovasyon Ürünleriniz İçin Hazır</h2>
+		<h2>{$t('product.ctaTitle')}</h2>
 		<p>
-			Modüler, esnek ve güvenilir çözümlerle markanızı öne çıkarın. Teknik servis ağımızla her zaman
-			yanınızdayız.
+			{$t('product.ctaText')}
 		</p>
 		<a href="https://www.stinovasyon.com" class="btn" target="_blank" rel="noreferrer">
-			ST İnovasyon Web Sitesi
+			{$t('product.website')}
 		</a>
 	</section>
 </div>
@@ -110,11 +110,8 @@
 
 	.feature-item {
 		padding: 1.25rem;
-
 		background: var(--bg-color);
-
 		border: 1px solid var(--border-color);
-
 		border-radius: 8px;
 	}
 
@@ -172,7 +169,6 @@
 
 	.btn:hover {
 		opacity: 0.85;
-
 		text-decoration: none;
 	}
 

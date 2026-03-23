@@ -2,6 +2,8 @@
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { t } from '$lib/i18n';
+	import LangSwitcher from '$lib/components/LangSwitcher.svelte';
 	import logo from './st-logo.png';
 
 	let currentPath = '/';
@@ -18,25 +20,35 @@
 			<span class="logo-text">ST İnovasyon</span>
 		</a>
 
-		<nav>
-			<ul>
-				<li class:active={currentPath === '/' || currentPath === ''}>
-					<a data-sveltekit-preload-data="hover" href={resolve('/')}>Açılış</a>
-				</li>
-				<li class:active={currentPath.startsWith('/about')}>
-					<a data-sveltekit-preload-data="hover" href={resolve('/about/')}>Hakkında</a>
-				</li>
-				<li class:active={currentPath.startsWith('/reference')}>
-					<a data-sveltekit-preload-data="hover" href={resolve('/reference/')}>Referanslar</a>
-				</li>
-				<li class:active={currentPath.startsWith('/product')}>
-					<a data-sveltekit-preload-data="hover" href={resolve('/product/')}>Ürün</a>
-				</li>
-				<li class:active={currentPath.startsWith('/contact')}>
-					<a data-sveltekit-preload-data="hover" href={resolve('/contact/')}>İletişim</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="header-right">
+			<nav>
+				<ul>
+					<li class:active={currentPath === '/' || currentPath === ''}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/')}>{$t('nav.home')}</a>
+					</li>
+					<li class:active={currentPath.startsWith('/about')}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/about/')}>{$t('nav.about')}</a>
+					</li>
+					<li class:active={currentPath.startsWith('/reference')}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/reference/')}
+							>{$t('nav.references')}</a
+						>
+					</li>
+					<li class:active={currentPath.startsWith('/product')}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/product/')}
+							>{$t('nav.product')}</a
+						>
+					</li>
+					<li class:active={currentPath.startsWith('/contact')}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/contact/')}
+							>{$t('nav.contact')}</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<LangSwitcher />
+		</div>
 	</div>
 </header>
 
@@ -58,6 +70,12 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 72px;
+	}
+
+	.header-right {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
 	}
 
 	.logo {

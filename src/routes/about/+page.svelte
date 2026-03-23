@@ -1,57 +1,46 @@
+<script>
+	import { t } from '$lib/i18n';
+</script>
+
 <svelte:head>
-	<title>Hakkımızda | ST Inovasyon</title>
-	<meta
-		name="description"
-		content="ST Inovasyon'un patentli teknolojisi hakkında bilgi edinin. Gerçek, havada süzülen nesnelerle ürün sergileme ve reklamcılığı dönüştürüyor."
-	/>
+	<title>{$t('about.title')}</title>
+	<meta name="description" content={$t('about.metaDescription')} />
 </svelte:head>
 
 <div class="page">
 	<section class="page-header">
-		<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
+		<h1>{$t('about.titleMain')}</h1>
 		<p>
-			ZeroG stinovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün
-			sunum çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri
-			oluşturuyor.
+			{$t('about.subtitle')}
 		</p>
 	</section>
 
 	<section class="card">
-		<h2>Patentli Yeniliğimiz</h2>
+		<h2>{$t('about.patentTitle')}</h2>
 		<p>
-			Ürün sunumunun geleceğine hoş geldiniz. Temel buluşumuz, ZeroG stinovasyon Ürün Tanıtım
-			Standı, dünya çapında eşi benzeri görülmemiş ve patentli bir teknolojidir. Bu teknoloji,
-			<strong>3D, somut, fiziksel nesnelerin</strong> farklı ebatlardaki kutular içinde zarif bir şekilde
-			boşlukda dönmesini sağlar ve herhangi bir görünür destekten bağımsızdır.
+			{@html $t('about.patentP1')}
 		</p>
 		<p>
-			Bu bir hologram, bir projeksiyon veya sanal bir hile değildir. Bu, yeniden hayal edilmiş bir
-			gerçektir. Bu buluş, vitrin, açık hava ve kapalı alan reklamcılığı konvansiyonlarını altüst
-			etmeye hazırlanıyor ve kalabalık bir pazarda dikkat çekme zorluğuna etkileyici bir çözüm
-			sunuyor.
+			{$t('about.patentP2')}
 		</p>
 	</section>
 
 	<section class="card">
-		<h2>Özgünlük Vizyonu</h2>
+		<h2>{$t('about.visionTitle')}</h2>
 		<p>
-			Dijital ve sanal "yeniliklerle" dolu bir dünyada, fizikselin gücüne inanıyoruz. Gerçek bir
-			ürünün yerçekimine meydan okuduğunu görmek, sanal ekranların çoğaltamayacağı derin bir etki
-			yaratır. ST Inovasyon, markaların kalabalığın arasından sıyrılmasına ve benzersiz bir prestij
-			oluşturmasına olanak tanır.
+			{$t('about.visionP1')}
 		</p>
 		<p>
-			Teknolojimizi kullanarak, şirketler güçlü bir marka kimliği oluşturma kritik zorluğunu
-			aşabilir ve kalite, yenilik ve hayranlık izlenimi bırakan kalıcı bir etki oluşturabilir.
+			{$t('about.visionP2')}
 		</p>
 	</section>
 
 	<section class="card">
-		<h2>Basında Biz</h2>
+		<h2>{$t('about.pressTitle')}</h2>
 		<div class="video-wrapper">
 			<iframe
 				src="https://www.youtube.com/embed/4hik2i4isZc"
-				title="ST Inovasyon Basında"
+				title="ST Inovasyon {$t('about.pressTitle')}"
 				frameborder="0"
 				referrerpolicy="strict-origin-when-cross-origin"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -75,7 +64,7 @@
 		border-bottom: 1px solid var(--border-color);
 	}
 
-	strong {
+	:global(.page p strong) {
 		color: var(--text-color);
 	}
 
@@ -97,5 +86,4 @@
 		height: 100%;
 		border: none;
 	}
-
 </style>

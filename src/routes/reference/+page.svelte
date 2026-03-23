@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { t } from '$lib/i18n';
 
 	interface Reference {
 		title: string;
@@ -11,37 +12,35 @@
 		{
 			title: 'Zero g Üç Boyutlu Ürün Tanıtım Standı',
 			videoId: 'saaAck9vyfs',
-			category: 'Ürün Tanıtımı'
+			category: 'productShowcase'
 		},
 		{
 			title: 'Zero G - Ürün Tanıtımı 2014 Ankamall - St inovasyon',
 			videoId: 'DuoOqC57cN0',
-			category: 'Ürün Tanıtımı'
+			category: 'productShowcase'
 		},
-		{ title: 'Zero G Folli Follie', videoId: 'hv08PzUvD44', category: 'Ürün Tanıtımı' },
+		{ title: 'Zero G Folli Follie', videoId: 'hv08PzUvD44', category: 'productShowcase' },
 		{
 			title: 'THY Farklı Konsept Çalışması',
 			videoId: 'qbMO44oJckY',
-			category: 'Konsept Çalışmalar'
+			category: 'conceptWork'
 		},
-		{ title: 'KALP ve YÜZÜK - ZERO G', videoId: 'wfLx9vYNRK0', category: 'Ürün Tanıtımı' },
+		{ title: 'KALP ve YÜZÜK - ZERO G', videoId: 'wfLx9vYNRK0', category: 'productShowcase' },
 		{
 			title: 'ZERO G - BİLEZİK 3D ÜRÜN TANITIM STANDI',
 			videoId: 'TAP9G-soywc',
-			category: 'Ürün Tanıtımı'
+			category: 'productShowcase'
 		},
-		{ title: 'İkili kalp', videoId: 'z0ORGeU6oPo', category: 'Ürün Tanıtımı' }
+		{ title: 'İkili kalp', videoId: 'z0ORGeU6oPo', category: 'productShowcase' }
 	];
 
 	let filteredReferences: Reference[] = [];
-	let selectedCategory = 'Tümü';
+	let selectedCategory = 'all';
 	let searchQuery = '';
-
-	const categories = ['Tümü', 'Ürün Tanıtımı', 'Konsept Çalışmalar'];
 
 	function filterReferences() {
 		filteredReferences = references.filter((ref) => {
-			const matchesCategory = selectedCategory === 'Tümü' || ref.category === selectedCategory;
+			const matchesCategory = selectedCategory === 'all' || ref.category === selectedCategory;
 			const matchesSearch = ref.title.toLowerCase().includes(searchQuery.toLowerCase());
 			return matchesCategory && matchesSearch;
 		});
@@ -63,36 +62,40 @@
 </script>
 
 <svelte:head>
-	<title>Referanslar | ST İnovasyon</title>
-	<meta
-		name="description"
-		content="ST İnovasyon tarafından oluşturulan başarılı projeler ve üretim çalışmaları"
-	/>
+	<title>{$t('reference.title')}</title>
+	<meta name="description" content={$t('reference.metaDescription')} />
 </svelte:head>
 
 <div class="page">
 	<section class="page-header">
-		<h1>Referanslarımız</h1>
-		<p>ST İnovasyon tarafından oluşturulan başarılı projeler ve üretim çalışmalarımız</p>
+		<h1>{$t('reference.titleMain')}</h1>
+		<p>{$t('reference.subtitle')}</p>
 	</section>
 
 	<div class="filters card">
 		<input
 			type="text"
-			placeholder="Referansları ara..."
-			on:input={handleSearch}
+			placeholder={$t('reference.searchPlaceholder')}
+			oninput={handleSearch}
 			value={searchQuery}
 		/>
 
 		<div class="category-btns">
-			{#each categories as category}
-				<button
-					class:active={selectedCategory === category}
-					on:click={() => handleCategoryChange(category)}
-				>
-					{category}
-				</button>
-			{/each}
+			<button class:active={selectedCategory === 'all'} onclick={() => handleCategoryChange('all')}>
+				{$t('reference.all')}
+			</button>
+			<button
+				class:active={selectedCategory === 'productShowcase'}
+				onclick={() => handleCategoryChange('productShowcase')}
+			>
+				{$t('reference.productShowcase')}
+			</button>
+			<button
+				class:active={selectedCategory === 'conceptWork'}
+				onclick={() => handleCategoryChange('conceptWork')}
+			>
+				{$t('reference.conceptWork')}
+			</button>
 		</div>
 	</div>
 
@@ -112,15 +115,15 @@
 					</div>
 					<div class="ref-info">
 						<h3>{reference.title}</h3>
-						<span class="tag">{reference.category}</span>
+						<span class="tag">{$t(`reference.${reference.category}`)}</span>
 					</div>
 				</div>
 			{/each}
 		</div>
 	{:else}
 		<div class="no-results card">
-			<h3>Referans bulunamadı</h3>
-			<p>Arama kriterlerinize uygun referans bulunamadı.</p>
+			<h3>{$t('reference.noResults')}</h3>
+			<p>{$t('reference.noResultsText')}</p>
 		</div>
 	{/if}
 </div>

@@ -1,29 +1,26 @@
+<script>
+	import { t } from '$lib/i18n';
+</script>
+
 <svelte:head>
-	<title>ST İnovasyon | ZeroG</title>
-	<meta
-		name="description"
-		content="ZeroG — patentli ürün sergileme platformu. Gerçek ürünler, benzersiz görsel deneyim."
-	/>
+	<title>{$t('home.title')}</title>
+	<meta name="description" content={$t('home.metaDescription')} />
 </svelte:head>
 
 <div class="page">
 	<section class="card">
-		<h2>ZeroG Nedir?</h2>
+		<h2>{$t('home.whatIsZeroG')}</h2>
 		<p>
-			ZeroG, (stinovasyon) patentli bir ürün sergileme platformudur. Dünyada eşsizdir. Reklam
-			ajanslarının, markaların, üretici firmaların ve kuruluşların ürünlerini tanıtım reklam ve
-			pazarlama amacı ile sıradışı sergilemelerine ve izleyicilere benzersiz ve unutulmaz bir görsel
-			deneyim sunmalarına yardımcı olmak için tasarlanmıştır; ürünler dijital veya holografik değil,
-			gerçek ürünlerdir..
+			{@html $t('home.whatIsZeroGDesc')}
 		</p>
 	</section>
 
 	<section class="card">
-		<h2>Tanıtım Videosu</h2>
+		<h2>{$t('home.promoVideo')}</h2>
 		<div class="video-wrapper">
 			<iframe
 				src="https://www.youtube.com/embed/DuoOqC57cN0"
-				title="ZeroG Tanıtım Videosu"
+				title="ZeroG {$t('home.promoVideo')}"
 				frameborder="0"
 				referrerpolicy="strict-origin-when-cross-origin"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -34,14 +31,13 @@
 
 	<section class="card tagline-card">
 		<p class="tagline">
-			ZeroG'nin sihirli kutusu, nesneleri havaya kaldırdığı için değil, etrafına insanları yoğun bir
-			şekilde çektiği için gizemli.
+			{$t('home.tagline')}
 		</p>
-		<h3 class="tagline-info">Salih TURHAL</h3>
+		<h3 class="tagline-info">{$t('home.taglineAuthor')}</h3>
 	</section>
 
 	<section class="card">
-		<h2>Referanslarımız</h2>
+		<h2>{$t('home.ourReferences')}</h2>
 		<div class="refs-grid">
 			<a
 				href="https://www.youtube.com/watch?v=ime8da_ne8s"
@@ -191,7 +187,6 @@
 	}
 
 	@media (max-width: 600px) {
-
 		.tagline {
 			font-size: 1.05rem;
 		}
