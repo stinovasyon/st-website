@@ -18,17 +18,13 @@
         <article class="card">
             <h2>İstanbul İletişim</h2>
             <ul>
-                <li><a href="tel:+902165115897">0216 511 58 97</a></li>
+                <li><a href="tel:+905010308117">0501 030 81 17</a></li>
             </ul>
         </article>
 
         <article class="card">
             <h2>Ankara İletişim</h2>
             <ul>
-                <li><a href="tel:+903124810038">0312 481 00 38</a></li>
-                <li><a href="tel:+903124810039">0312 481 00 39</a></li>
-                <li><a href="tel:+903124810061">0312 481 00 61</a></li>
-                <li><a href="tel:+903124810062">0312 481 00 62</a></li>
                 <li><a href="tel:+905322380052">0532 238 00 52</a></li>
             </ul>
         </article>
