@@ -12,54 +12,67 @@
 	<section class="card">
 		<h2>Özellikler</h2>
 
-	<div class="features-grid">
+		<div class="features-grid">
 			<div class="feature-item">
-			<h3>Esnek Boyutlar</h3>
-			<p>14x14x14 cm'den 220x220x220 cm'ye kadar her boyutta ürün üretimi</p>
-		</div>
+				<h3>Esnek Boyutlar</h3>
+				<p>14x14x14 cm'den 220x220x220 cm'ye kadar her boyutta ürün üretimi</p>
+			</div>
 			<div class="feature-item">
-			<h3>Modüler Yapı</h3>
-			<p>İçinde birden fazla ürün aynı anda hareket edebilir</p>
-		</div>
+				<h3>Modüler Yapı</h3>
+				<p>İçinde birden fazla ürün aynı anda hareket edebilir</p>
+			</div>
 			<div class="feature-item">
-			<h3>Çoklu Kurulum</h3>
-			<p>Duvara gömülebilir, tavana asılabilir, tezgah üstü konulabilir</p>
-		</div>
+				<h3>Çoklu Kurulum</h3>
+				<p>Duvara gömülebilir, tavana asılabilir, tezgah üstü konulabilir</p>
+			</div>
 			<div class="feature-item">
-			<h3>Şarjlı Opsiyon</h3>
-			<p>Şarjlı olabilir, kolay kullanım sunar</p>
+				<h3>Şarjlı Opsiyon</h3>
+				<p>Şarjlı olabilir, kolay kullanım sunar</p>
+			</div>
 		</div>
-	</div>
 	</section>
 
 	<section class="card">
 		<h2>Ürün Özellikleri</h2>
 		<div class="spec-list">
 			<div class="spec-item">
-					<h4>Şekil ve Yapı</h4>
-					<p>Tüm ürünler küp ve dikdörtgen prizma şeklindedir</p>
+				<h4>Şekil ve Yapı</h4>
+				<p>Tüm ürünler küp ve dikdörtgen prizma şeklindedir</p>
 			</div>
 			<div class="spec-item">
-					<h4>Ağırlık</h4>
-					<p>Ağır bir ürün değildir</p>
+				<h4>Ağırlık</h4>
+				<p>Ağır bir ürün değildir</p>
 			</div>
 			<div class="spec-item">
-					<h4>Dış Yüzey</h4>
-					<p>İstenilen şekilde tasarım yapılabilir</p>
+				<h4>Dış Yüzey</h4>
+				<p>İstenilen şekilde tasarım yapılabilir</p>
 			</div>
 			<div class="spec-item">
-					<h4>İç İçerik</h4>
-					<p>Metal, ahşap veya plastik olabilir</p>
+				<h4>İç İçerik</h4>
+				<p>Metal, ahşap veya plastik olabilir</p>
 			</div>
 			<div class="spec-item">
-					<h4>Ortam Etkisi</h4>
-					<p>Radyasyon yaymak gibi olumsuz bir etkisi yoktur</p>
+				<h4>Ortam Etkisi</h4>
+				<p>Radyasyon yaymak gibi olumsuz bir etkisi yoktur</p>
 			</div>
 			<div class="spec-item">
-					<h4>Kurulum Alanları</h4>
-					<p>Açık Hava, Kapalı Alan, AVM, Havaalanları, Fuar Alanları</p>
+				<h4>Kurulum Alanları</h4>
+				<p>Açık Hava, Kapalı Alan, AVM, Havaalanları, Fuar Alanları</p>
 			</div>
 		</div>
+	</section>
+
+	<section class="card">
+		<h2>Ticari Alanlar</h2>
+		<ul class="commercial-list">
+			<li>Yurtdışı distribütörlüğü</li>
+			<li>Uluslararası firmalarla lisans anlaşması</li>
+			<li>
+				Reklam ajansları ile AVM'ler, fuar alanları, havaalanları vb. yerlerde yeni bir reklam
+				mercii oluşturmak
+			</li>
+			<li>Promosyon ve hediyelik eşya sektöründe çoklu adetlerde anlaşmalar</li>
+		</ul>
 	</section>
 
 	<section class="card cta">
@@ -72,7 +85,6 @@
 			ST İnovasyon Web Sitesi
 		</a>
 	</section>
-
 </div>
 
 <style>
@@ -82,7 +94,6 @@
 
 		gap: 1.5rem;
 	}
-
 
 	.page-header {
 		text-align: center;
@@ -126,11 +137,9 @@
 	.feature-item {
 		padding: 1.25rem;
 
-
 		background: var(--bg-color);
 
 		border: 1px solid var(--border-color);
-
 
 		border-radius: 8px;
 	}
@@ -161,6 +170,25 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
+	}
+
+	.commercial-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1rem;
+	}
+
+	.commercial-list li {
+		padding: 1.25rem;
+		background: var(--bg-color);
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		color: var(--text-muted-color);
+		line-height: 1.5;
+		font-size: 0.95rem;
 	}
 
 	p {
@@ -198,9 +226,7 @@
 	}
 
 	.btn:hover {
-
 		opacity: 0.85;
-
 
 		text-decoration: none;
 	}
@@ -208,7 +234,7 @@
 	@media (max-width: 600px) {
 		.page-header {
 			padding: 2rem 1rem;
-	}
+		}
 		.card {
 			padding: 1.5rem;
 		}
@@ -219,8 +245,5 @@
 		h2 {
 			font-size: 1.4rem;
 		}
-
-
 	}
 </style>
-
