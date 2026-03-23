@@ -12,7 +12,7 @@
 			<h1>Reklamcılıkta Gerçekliği Yeniden Tanımlıyoruz.</h1>
 		<p>
 			ZeroG stinovasyon, gerçek, fiziksel nesnelerin havada süzülerek sergilendiği yeni bir ürün sunum
-			çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri yaratıyor.
+			çağına öncülük ediyor. Havada süzülen nesnelerle unutulmaz marka deneyimleri oluşturuyor.
 			</p>
 	</section>
 
