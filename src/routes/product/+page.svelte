@@ -34,29 +34,29 @@
 
 	<section class="card">
 		<h2>Ürün Özellikleri</h2>
-		<div class="spec-list">
-			<div class="spec-item">
-				<h4>Şekil ve Yapı</h4>
+		<div class="features-grid">
+			<div class="feature-item">
+				<h3>Şekil ve Yapı</h3>
 				<p>Tüm ürünler küp ve dikdörtgen prizma şeklindedir</p>
 			</div>
-			<div class="spec-item">
-				<h4>Ağırlık</h4>
+			<div class="feature-item">
+				<h3>Ağırlık</h3>
 				<p>Ağır bir ürün değildir</p>
 			</div>
-			<div class="spec-item">
-				<h4>Dış Yüzey</h4>
+			<div class="feature-item">
+				<h3>Dış Yüzey</h3>
 				<p>İstenilen şekilde tasarım yapılabilir</p>
 			</div>
-			<div class="spec-item">
-				<h4>İç İçerik</h4>
+			<div class="feature-item">
+				<h3>İç İçerik</h3>
 				<p>Metal, ahşap veya plastik olabilir</p>
 			</div>
-			<div class="spec-item">
-				<h4>Ortam Etkisi</h4>
+			<div class="feature-item">
+				<h3>Ortam Etkisi</h3>
 				<p>Radyasyon yaymak gibi olumsuz bir etkisi yoktur</p>
 			</div>
-			<div class="spec-item">
-				<h4>Kurulum Alanları</h4>
+			<div class="feature-item">
+				<h3>Kurulum Alanları</h3>
 				<p>Açık Hava, Kapalı Alan, AVM, Havaalanları, Fuar Alanları</p>
 			</div>
 		</div>
@@ -148,28 +148,6 @@
 		font-size: 1.05rem;
 		color: var(--text-color);
 		margin: 0 0 0.5rem;
-	}
-
-	.spec-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-		gap: 1rem;
-	}
-
-	.spec-item {
-		padding: 1.25rem;
-		background: var(--bg-color);
-		border: 1px solid var(--border-color);
-		border-radius: 8px;
-	}
-
-	h4 {
-		font-size: 0.9rem;
-		color: var(--primary-color);
-		margin: 0 0 0.35rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
 	}
 
 	.commercial-list {
