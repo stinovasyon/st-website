@@ -5,7 +5,7 @@
 
 	let { children } = $props();
 
-	let theme = $state('light');
+	let theme = $state('dark');
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('theme');
@@ -24,7 +24,7 @@
 
 <div class="theme-wrapper">
 	<button class="theme-toggle" onclick={toggleTheme} aria-label="Toggle theme">
-		{theme === 'light' ? '🌙' : '☀️'}
+		{theme === 'dark' ? '🌙' : '☀️'}
 	</button>
 
 	<Header />

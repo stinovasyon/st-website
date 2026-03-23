@@ -166,7 +166,7 @@
 		padding: 0.5rem 1.1rem;
 		background: var(--bg-color);
 		border: 1px solid var(--border-color);
-		border-radius: 20px;
+		border-radius: 10px;
 		color: var(--text-muted-color);
 		font-size: 0.9rem;
 		cursor: pointer;
