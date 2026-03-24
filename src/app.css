@@ -537,15 +537,18 @@ button:focus:not(:focus-visible) {
 
 	.filters {
 		flex-direction: column;
+		box-sizing: border-box;
 	}
 
 	.filters input {
 		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.category-btns {
 		width: 100%;
 		justify-content: center;
+		box-sizing: border-box;
 	}
 
 	.video-wrapper {
