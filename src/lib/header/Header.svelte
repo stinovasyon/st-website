@@ -238,7 +238,7 @@
 
 		.header-right {
 			position: fixed;
-			top: 72px;
+			top: 64px;
 			left: 0;
 			right: 0;
 			bottom: 0;
@@ -246,9 +246,12 @@
 			flex-direction: column;
 			padding: 1rem;
 			gap: 0;
+			overflow-y: auto;
+			overflow-x: hidden;
 			transform: translateX(100%);
 			transition: transform 0.3s ease;
 			z-index: 99;
+			box-sizing: border-box;
 		}
 
 		.header-right.open {
@@ -273,6 +276,7 @@
 			padding: 1rem;
 			font-size: 1.1rem;
 			justify-content: center;
+			box-sizing: border-box;
 		}
 
 		.header-content {
