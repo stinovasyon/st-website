@@ -4,7 +4,7 @@
 	import { resolve } from '$app/paths';
 	import { t } from '$lib/i18n';
 	import LangSwitcher from '$lib/components/LangSwitcher.svelte';
-	import logo from './st-logo.png';
+	import logo from './zerog-logo.png';
 
 	let { theme = 'dark', toggleTheme = null } = $props();
 
@@ -155,6 +155,11 @@
 		width: 40px;
 		height: 40px;
 		object-fit: contain;
+		filter: brightness(0);
+	}
+
+	:global(html[data-theme='dark']) .logo img {
+		filter: brightness(0) invert(1);
 	}
 
 	.logo-text {
