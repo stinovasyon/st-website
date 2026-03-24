@@ -45,7 +45,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="vakko-logo.png" alt="Vakko" />
+				<img class="black-logo" src="vakko-logo.png" alt="Vakko" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=L_YILEbWQD4"
@@ -53,7 +53,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="loreal-logo.png" alt="L'Oréal" />
+				<img class="black-logo" src="loreal-logo.png" alt="L'Oréal" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=hv08PzUvD44"
@@ -106,3 +106,12 @@
 		</div>
 	</section>
 </div>
+
+<style>
+
+
+	:global(html[data-theme='dark']) .black-logo {
+		filter: brightness(0) invert(1);
+	}
+
+</style>
