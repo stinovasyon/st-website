@@ -6,11 +6,25 @@
 	import LangSwitcher from '$lib/components/LangSwitcher.svelte';
 	import logo from './st-logo.png';
 
-	let currentPath = '/';
+	let { theme = 'dark', toggleTheme = null } = $props();
+
+	let currentPath = $state('/');
+	let mobileMenuOpen = $state(false);
 
 	afterNavigate(() => {
 		currentPath = $page.url.pathname;
+		mobileMenuOpen = false;
 	});
+
+	function toggleMobileMenu() {
+		mobileMenuOpen = !mobileMenuOpen;
+	}
+
+	function handleToggleTheme() {
+		if (toggleTheme) {
+			toggleTheme(event);
+		}
+	}
 </script>
 
 <header>
@@ -20,7 +34,49 @@
 			<span class="logo-text">ST İnovasyon</span>
 		</a>
 
-		<div class="header-right">
+		<div class="header-actions">
+			{#if toggleTheme}
+				<button class="theme-toggle" onclick={handleToggleTheme} aria-label="Toggle theme">
+					{theme === 'dark' ? '🌙' : '☀️'}
+				</button>
+			{/if}
+
+			<LangSwitcher />
+
+			<button class="mobile-toggle" onclick={toggleMobileMenu} aria-label="Toggle menu">
+				{#if mobileMenuOpen}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"
+						></line></svg
+					>
+				{:else}
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"
+						></line><line x1="3" y1="18" x2="21" y2="18"></line></svg
+					>
+				{/if}
+			</button>
+		</div>
+
+		<div class="header-right" class:open={mobileMenuOpen}>
 			<nav>
 				<ul>
 					<li class:active={currentPath === '/' || currentPath === ''}>
@@ -46,8 +102,6 @@
 					</li>
 				</ul>
 			</nav>
-
-			<LangSwitcher />
 		</div>
 	</div>
 </header>
@@ -76,6 +130,12 @@
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+	}
+
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.logo {
@@ -141,10 +201,83 @@
 		background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
 	}
 
+	.mobile-toggle {
+		display: none;
+		background: none;
+		border: none;
+		padding: 0.5rem;
+		cursor: pointer;
+		color: var(--text-color);
+	}
+
+	.theme-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 36px;
+		height: 36px;
+		background: var(--surface-color);
+		border: 1px solid var(--border-color);
+		border-radius: 50%;
+		cursor: pointer;
+		font-size: 1rem;
+	}
+
 	@media (max-width: 768px) {
+		.mobile-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.header-actions {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		.header-right {
+			position: fixed;
+			top: 72px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: var(--bg-color);
+			flex-direction: column;
+			padding: 1rem;
+			gap: 0;
+			transform: translateX(100%);
+			transition: transform 0.3s ease;
+			z-index: 99;
+		}
+
+		.header-right.open {
+			transform: translateX(0);
+		}
+
+		nav {
+			width: 100%;
+		}
+
+		nav ul {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		nav li {
+			width: 100%;
+		}
+
+		nav a {
+			width: 100%;
+			padding: 1rem;
+			font-size: 1.1rem;
+			justify-content: center;
+		}
+
 		.header-content {
 			height: 64px;
-			padding: 0 1.5rem;
+			padding: 0 1rem;
 		}
 
 		.logo-text {
@@ -154,26 +287,6 @@
 		.logo img {
 			width: 36px;
 			height: 36px;
-		}
-
-		nav a {
-			padding: 0.5rem 0.75rem;
-			font-size: 0.85rem;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.header-content {
-			padding: 0 1rem;
-		}
-
-		nav ul {
-			gap: 0;
-		}
-
-		nav a {
-			padding: 0.5rem 0.625rem;
-			font-size: 0.8rem;
 		}
 	}
 </style>

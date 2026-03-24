@@ -522,36 +522,49 @@ button:focus:not(:focus-visible) {
 	.grid {
 		grid-template-columns: 1fr;
 	}
+
+	.reference-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.features-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.page .commercial-list {
+		grid-template-columns: 1fr;
+	}
+
+	.filters {
+		flex-direction: column;
+	}
+
+	.filters input {
+		width: 100%;
+	}
+
+	.category-btns {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.video-wrapper {
+		margin-top: 1rem;
+	}
+
+	.ref-link {
+		padding: 0.75rem;
+	}
+
+	.ref-link img {
+		max-width: 100px;
+	}
 }
 
 .theme-wrapper {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-}
-
-.theme-toggle {
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	z-index: 1000;
-	background: var(--surface-color);
-	border: 1px solid var(--border-color);
-	border-radius: 50%;
-	width: 44px;
-	height: 44px;
-	cursor: pointer;
-	font-size: 1.2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition:
-		background 0.2s,
-		transform 0.2s;
-}
-
-.theme-toggle:hover {
-	transform: scale(1.1);
 }
 
 main {

@@ -26,11 +26,7 @@
 </script>
 
 <div class="theme-wrapper">
-	<button class="theme-toggle" onclick={toggleTheme} aria-label="Toggle theme">
-		{theme === 'dark' ? '🌙' : '☀️'}
-	</button>
-
-	<Header />
+	<Header {toggleTheme} {theme} />
 
 	<main>
 		{@render children()}
