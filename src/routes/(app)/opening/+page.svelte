@@ -69,7 +69,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="/trt_1_logo_2021.png" alt="TRT 1" />
+				<img class="trt-logo" src="/trt_1_logo_2021.png" alt="TRT 1" />
 			</a>
 			<a
 				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
@@ -77,7 +77,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="/tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
+				<img class="sb-logo" src="/tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=C00ovZf8wOU"
@@ -93,7 +93,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="/ankamall-logo.png" alt="Ankamall" />
+				<img class="ankamall-logo" src="/ankamall-logo.png" alt="Ankamall" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=YpN-C2dsUzU"
@@ -110,5 +110,14 @@
 <style>
 	:global(html[data-theme='dark']) .black-logo {
 		filter: brightness(0) invert(1);
+	}
+	:global(html[data-theme='dark']) .trt-logo {
+		filter: brightness(2.5);
+	}
+	:global(html[data-theme='dark']) .sb-logo {
+		filter: brightness(5) invert(0.25);
+	}
+	:global(html[data-theme='dark']) .ankamall-logo {
+		filter: brightness(5) invert(0.25);
 	}
 </style>
