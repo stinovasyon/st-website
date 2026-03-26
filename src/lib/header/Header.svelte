@@ -79,8 +79,8 @@
 		<div class="header-right" class:open={mobileMenuOpen}>
 			<nav>
 				<ul>
-					<li class:active={currentPath === '/' || currentPath === ''}>
-						<a data-sveltekit-preload-data="hover" href={resolve('/')}>{$t('nav.home')}</a>
+					<li class:active={currentPath.startsWith('/opening') || currentPath === '/'}>
+						<a data-sveltekit-preload-data="hover" href={resolve('/opening/')}>{$t('nav.home')}</a>
 					</li>
 					<li class:active={currentPath.startsWith('/about')}>
 						<a data-sveltekit-preload-data="hover" href={resolve('/about/')}>{$t('nav.about')}</a>

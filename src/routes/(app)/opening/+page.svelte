@@ -45,7 +45,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img class="black-logo" src="vakko-logo.png" alt="Vakko" />
+				<img class="black-logo" src="/vakko-logo.png" alt="Vakko" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=L_YILEbWQD4"
@@ -53,7 +53,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img class="black-logo" src="loreal-logo.png" alt="L'Oréal" />
+				<img class="black-logo" src="/loreal-logo.png" alt="L'Oréal" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=hv08PzUvD44"
@@ -61,7 +61,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="folli-follie-logo.png" alt="Folli Follie" />
+				<img src="/folli-follie-logo.png" alt="Folli Follie" />
 			</a>
 			<a
 				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
@@ -69,7 +69,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="trt_1_logo_2021.png" alt="TRT 1" />
+				<img src="/trt_1_logo_2021.png" alt="TRT 1" />
 			</a>
 			<a
 				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
@@ -77,7 +77,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
+				<img src="/tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=C00ovZf8wOU"
@@ -85,7 +85,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="aselsan-logo.png" alt="Aselsan" />
+				<img src="/aselsan-logo.png" alt="Aselsan" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=DuoOqC57cN0"
@@ -93,7 +93,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="ankamall-logo.png" alt="Ankamall" />
+				<img src="/ankamall-logo.png" alt="Ankamall" />
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=YpN-C2dsUzU"
@@ -101,7 +101,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="tekmar-logo.png" alt="Tekmar" />
+				<img src="/tekmar-logo.png" alt="Tekmar" />
 			</a>
 		</div>
 	</section>
