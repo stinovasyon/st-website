@@ -21,6 +21,7 @@
 			<ul>
 				<li><a href="tel:+905010308117">Mehmet Ali</a></li>
 				<li><a href="tel:+905010308117">0501 030 81 17</a></li>
+				<li>Please use this channel for English communication.</li>
 			</ul>
 		</article>
 
