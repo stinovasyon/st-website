@@ -1,117 +1,56 @@
 <script>
-	import { t } from '$lib/i18n';
+	import zerogLogo from '$lib/header/zerog-logo.png';
 </script>
 
 <svelte:head>
-	<title>{$t('home.title')}</title>
-	<meta name="description" content={$t('home.metaDescription')} />
+	<title>ZeroG - Stinovasyon</title>
 </svelte:head>
 
-<div class="page">
-	<section class="card">
-		<h2>{$t('home.whatIsZeroG')}</h2>
-		<p>
-			{@html $t('home.whatIsZeroGDesc')}
-		</p>
-	</section>
+<div class="opening-page">
+	<video class="video-bg" autoplay loop muted playsinline>
+		<source src="/avatar_link.mp4" type="video/mp4" />
+	</video>
 
-	<section class="card">
-		<h2>{$t('home.promoVideo')}</h2>
-		<div class="video-wrapper">
-			<iframe
-				src="https://www.youtube.com/embed/DuoOqC57cN0"
-				title="ZeroG {$t('home.promoVideo')}"
-				frameborder="0"
-				referrerpolicy="strict-origin-when-cross-origin"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
-		</div>
-	</section>
-
-	<section class="card tagline-card">
-		<p class="tagline">
-			{$t('home.tagline')}
-		</p>
-		<h3 class="tagline-info">{$t('home.taglineAuthor')}</h3>
-	</section>
-
-	<section class="card">
-		<h2>{$t('home.ourReferences')}</h2>
-		<div class="refs-grid">
-			<a
-				href="https://www.youtube.com/watch?v=ime8da_ne8s"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img class="black-logo" src="vakko-logo.png" alt="Vakko" />
-			</a>
-			<a
-				href="https://www.youtube.com/watch?v=L_YILEbWQD4"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img class="black-logo" src="loreal-logo.png" alt="L'Oréal" />
-			</a>
-			<a
-				href="https://www.youtube.com/watch?v=hv08PzUvD44"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="folli-follie-logo.png" alt="Folli Follie" />
-			</a>
-			<a
-				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="trt_1_logo_2021.png" alt="TRT 1" />
-			</a>
-			<a
-				href="https://www.youtube.com/@zerog-stinovasyon9768/videos"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
-			</a>
-			<a
-				href="https://www.youtube.com/watch?v=C00ovZf8wOU"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="aselsan-logo.png" alt="Aselsan" />
-			</a>
-			<a
-				href="https://www.youtube.com/watch?v=DuoOqC57cN0"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="ankamall-logo.png" alt="Ankamall" />
-			</a>
-			<a
-				href="https://www.youtube.com/watch?v=YpN-C2dsUzU"
-				target="_blank"
-				rel="noreferrer"
-				class="ref-link"
-			>
-				<img src="tekmar-logo.png" alt="Tekmar" />
-			</a>
-		</div>
-	</section>
+	<a href="/opening" class="logo-link">
+		<img src={zerogLogo} alt="ZeroG" class="logo" />
+	</a>
 </div>
 
 <style>
+	.opening-page {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
 
+	.video-bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		z-index: 0;
+	}
 
-	:global(html[data-theme='dark']) .black-logo {
+	.logo-link {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
 		filter: brightness(0) invert(1);
 	}
 
+	.logo {
+		max-width: 200px;
+		width: 100%;
+		height: auto;
+	}
 </style>
