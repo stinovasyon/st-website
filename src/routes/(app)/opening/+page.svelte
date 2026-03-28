@@ -77,7 +77,11 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img class="sb-logo" src="/tc-sanayi-tek-logo.png" alt="T.C. Sanayi ve Teknoloji Bakanlığı" />
+				<img
+					class="sb-logo"
+					src="/tc-sanayi-tek-logo.png"
+					alt="T.C. Sanayi ve Teknoloji Bakanlığı"
+				/>
 			</a>
 			<a
 				href="https://www.youtube.com/watch?v=C00ovZf8wOU"
@@ -103,13 +107,21 @@
 			>
 				<img src="/tekmar-logo.png" alt="Tekmar" />
 			</a>
-				<a
+			<a
 				href="https://youtube.com/watch?v=ncZALOewKw0"
 				target="_blank"
 				rel="noreferrer"
 				class="ref-link"
 			>
 				<img src="/turk-patent-logo.svg" alt="T.C. Türk Patent ve Marka Kurumu" />
+			</a>
+			<a
+				href="https://youtube.com/watch?v=fGcIpMwW91E&si=QML_qzdbAIH_cTog"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
+				<img src="/togg_official_logo.svg" alt=" Türkiye'nin Otomobili Girişim Grubu Sanayi ve Ticaret A.Ş. " />
 			</a>
 		</div>
 	</section>
