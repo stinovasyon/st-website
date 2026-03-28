@@ -121,7 +121,7 @@
 				rel="noreferrer"
 				class="ref-link"
 			>
-				<img src="/togg_official_logo.svg" alt=" Türkiye'nin Otomobili Girişim Grubu Sanayi ve Ticaret A.Ş. " />
+				<img class="togg-logo" src="/togg_official_logo.svg" alt=" Türkiye'nin Otomobili Girişim Grubu Sanayi ve Ticaret A.Ş. " />
 			</a>
 		</div>
 	</section>
@@ -139,5 +139,8 @@
 	}
 	:global(html[data-theme='dark']) .ankamall-logo {
 		filter: brightness(5) invert(0.25);
+	}
+	:global(html[data-theme='dark']) .togg-logo {
+		filter: brightness(5) invert(0.05);
 	}
 </style>
