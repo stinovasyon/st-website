@@ -103,6 +103,14 @@
 			>
 				<img src="/tekmar-logo.png" alt="Tekmar" />
 			</a>
+				<a
+				href="https://youtube.com/watch?v=ncZALOewKw0"
+				target="_blank"
+				rel="noreferrer"
+				class="ref-link"
+			>
+				<img src="/turk-patent-logo.svg" alt="T.C. Türk Patent ve Marka Kurumu" />
+			</a>
 		</div>
 	</section>
 </div>

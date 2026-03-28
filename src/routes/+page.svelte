@@ -1,5 +1,15 @@
 <script>
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	import zerogLogo from '$lib/header/zerog-logo.png';
+
+	onMount(() => {
+		const timer = setTimeout(() => {
+			goto('/opening');
+		}, 10000);
+
+		return () => clearTimeout(timer);
+	});
 </script>
 
 <svelte:head>
