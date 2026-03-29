@@ -31,7 +31,12 @@
 			videoId: 'TAP9G-soywc',
 			category: 'productShowcase'
 		},
-		{ title: 'İkili kalp', videoId: 'z0ORGeU6oPo', category: 'productShowcase' }
+		{ title: 'İkili kalp', videoId: 'z0ORGeU6oPo', category: 'productShowcase' },
+		{
+			title: 'TOGG Konsept Çalışması',
+			videoId: 'fGcIpMwW91E',
+			category: 'conceptWork'
+		},
 	];
 
 	let filteredReferences: Reference[] = [];

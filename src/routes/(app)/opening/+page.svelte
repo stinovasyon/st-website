@@ -116,7 +116,7 @@
 				<img src="/turk-patent-logo.svg" alt="T.C. Türk Patent ve Marka Kurumu" />
 			</a>
 			<a
-				href="https://youtube.com/watch?v=fGcIpMwW91E&si=QML_qzdbAIH_cTog"
+				href="https://youtube.com/watch?v=fGcIpMwW91E"
 				target="_blank"
 				rel="noreferrer"
 				class="ref-link"
