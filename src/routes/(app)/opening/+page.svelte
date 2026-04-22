@@ -38,6 +38,7 @@
 
 	<section class="card">
 		<h2>{$t('home.ourReferences')}</h2>
+		<p>{$t('home.ourReferencesDesc')}</p>
 		<div class="refs-grid">
 			<a
 				href="https://www.youtube.com/watch?v=ime8da_ne8s"
